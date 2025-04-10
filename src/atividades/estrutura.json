@@ -1,0 +1,24 @@
+{
+    "galaxias": [
+      {
+        "id": "galaxia1",
+        "nome": "Galáxia Introdutória",
+        "planetas": [
+          { "id": "planeta1", "nome": "O que é programação?" },
+          { "id": "planeta2", "nome": "O que é JavaScript?" }
+        ]
+      },
+      {
+        "id": "galaxia2",
+        "nome": "Galáxia das Variáveis",
+        "planetas": [
+          { "id": "planeta3", "nome": "Aprendendo sobre variáveis" },
+          { "id": "planeta4", "nome": "Declarando variáveis" },
+          { "id": "planeta5", "nome": "Inicializando variáveis" },
+          { "id": "planeta6", "nome": "Atualizando variáveis" },
+          { "id": "planeta7", "nome": "Tipos de variáveis" }
+        ]
+      }
+    ]
+  }
+  

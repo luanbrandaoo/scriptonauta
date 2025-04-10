@@ -1,0 +1,45 @@
+{
+    "id": "planeta1",
+    "nome": "O que é programação?",
+    "atividades": [
+      {
+        "id": "p1a1",
+        "tipo": "expositiva",
+        "texto": "Programar é o ato de escrever instruções para que um computador realize tarefas. Essas instruções são escritas em linguagens de programação, como JavaScript."
+      },
+      {
+        "id": "p1a2",
+        "tipo": "expositiva",
+        "texto": "A história da programação começou no século XIX com Ada Lovelace, considerada a primeira programadora do mundo, por ter criado algoritmos para a máquina analítica de Charles Babbage."
+      },
+      {
+        "id": "p1a3",
+        "tipo": "expositiva",
+        "texto": "Na década de 1940, surgiram as primeiras linguagens, utilizadas em computadores como o ENIAC. Já em 1957, a linguagem Fortran foi criada para facilitar cálculos científicos.",
+        "imagem": "link da imagem"
+      },
+      {
+        "id": "p1a4",
+        "tipo": "multipla_escolha",
+        "pergunta": "Qual das alternativas melhor define programação?",
+        "opcoes": [
+          { "texto": "Desenhar programas de computador", "correta": false },
+          { "texto": "Configurar programas de computador", "correta": false },
+          { "texto": "Montar peças de computador", "correta": false },
+          { "texto": "Dar instruções para que o computador execute tarefas", "correta": true }
+        ]
+      },
+      {
+        "id": "p1a5",
+        "tipo": "multipla_escolha",
+        "pergunta": "Qual foi uma das primeiras linguagens de programação de alto nível?",
+        "opcoes": [
+          { "texto": "JavaScript", "correta": false },
+          { "texto": "Python", "correta": false },
+          { "texto": "Fortran", "correta": true },
+          { "texto": "Ruby", "correta": true }
+        ]
+      }
+    ]
+  }
+  

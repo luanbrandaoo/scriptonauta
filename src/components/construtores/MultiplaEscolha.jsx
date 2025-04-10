@@ -1,0 +1,1 @@
+//construtor das atividades de múltipla escolha
