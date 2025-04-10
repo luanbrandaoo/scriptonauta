@@ -45,6 +45,7 @@ Armazena os arquivos `.json` que descrevem a estrutura do conteúdo e atividades
 
 ### `pages/`
 Componentes de página inteira, que representam cada rota principal da aplicação.
+Ainda é necessário configurar o sistema de rotas dinâmicas utilizando algum plugin.
 
 - `LandingPage.jsx`: Página inicial pública com apresentação da plataforma (se o usuário já estiver logado, redirecionar direto para a Dashboard).
 - `Dashboard.jsx`: Página do aluno, mostra o progresso, galáxias desbloqueadas, e atividades disponíveis.
@@ -79,6 +80,8 @@ Estilos globais da aplicação.
 ## Rodando o projeto
 
 ```bash
+git clone https://github.com/luanbrandaoo/scriptonauta.git
+cd scriptonauta
 npm install
 npm run dev
 ```
