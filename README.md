@@ -28,9 +28,9 @@ Componentes e construtores reutilizáveis da interface.
 - Como mapa de galáxias, barras de progresso, etc.
 
 #### `components/construtores/`
-- `AbertaCurta.jsx`: Monta a atividade de resposta aberta e curta passada com propiedade pela página Atividades.
-- `Expositiva.jsx`: Monta a atividade de resposta aberta e curta passada com propiedade pela página Atividades.
-- `MultiplaEscolha.jsx`: Monta a atividade de resposta aberta e curta passada com propiedade pela página Atividades.
+- `AbertaCurta.jsx`: Monta a atividade de resposta aberta e curta passada como propiedade pela página Atividades.
+- `Expositiva.jsx`: Monta a atividade expositiva passada como propiedade pela página Atividades.
+- `MultiplaEscolha.jsx`: Monta a atividade de multipla escolha passada como propiedade pela página Atividades.
 
 
 ---
