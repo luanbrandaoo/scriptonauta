@@ -1,13 +1,8 @@
-import './App.css'
-import LandingPage from './pages/LandingPage'
+import './App.css';
+import AppRoutes from './routes';
 
 function App() {
-
-  return (
-    <>
-      <h1>Página inicial</h1>
-    </>
-  )
+	return <AppRoutes />;
 }
 
-export default App
+export default App;
