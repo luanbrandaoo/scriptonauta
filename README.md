@@ -1,5 +1,10 @@
 # Scriptonauta
 
+> ⚠️ **Aviso**
+>
+> Até o momento, apenas a estrutura do projeto e as rotas foram implementadas.  
+> A interface atual **não representa o design final** da aplicação — trata-se apenas de uma versão **demonstrativa e temporária** usada para fins de desenvolvimento.
+
 
 ## Estrutura de Pastas
 
@@ -7,11 +12,22 @@
 src/
 ├── assets/
 ├── components/
-│   └── construtores/
-├── atividades/
+│   └── constructors/
+│       ├── Expository.jsx
+│       ├── MultipleChoice.jsx
+│       └── ShortAnswer.jsx
+├── activities/
+│   ├── structure.json
+│   └── planetX.json
 ├── pages/
+│   ├── LandingPage.jsx
+│   ├── DashboardPage.jsx
+│   ├── PlanetPage.jsx
+│   ├── ActivitiesPage.jsx
+│   └── Error404.jsx
 ├── services/
 ├── App.jsx
+├── routes.jsx
 ├── main.jsx
 └── index.css
 ```
@@ -19,7 +35,7 @@ src/
 ---
 
 ### `assets/`
-Contém imagens, ícones, e outros recursos visuais.
+Contém imagens, ícones e outros recursos visuais.
 
 ---
 
@@ -27,48 +43,54 @@ Contém imagens, ícones, e outros recursos visuais.
 Componentes e construtores reutilizáveis da interface.
 - Como mapa de galáxias, barras de progresso, etc.
 
-#### `components/construtores/`
-- `AbertaCurta.jsx`: Monta a atividade de resposta aberta e curta passada com propiedade pela página Atividades.
-- `Expositiva.jsx`: Monta a atividade de resposta aberta e curta passada com propiedade pela página Atividades.
-- `MultiplaEscolha.jsx`: Monta a atividade de resposta aberta e curta passada com propiedade pela página Atividades.
-
+#### `components/constructors/`
+- `ShortAnswer.jsx`: Monta a atividade de resposta curta passada como propriedade pela página de atividades.
+- `Expository.jsx`: Monta a atividade expositiva passada como propriedade pela página de atividades.
+- `MultipleChoice.jsx`: Monta a atividade de múltipla escolha passada como propriedade pela página de atividades.
 
 ---
 
-### `atividades/`
+### `activities/`
 Armazena os arquivos `.json` que descrevem a estrutura do conteúdo e atividades da plataforma.
 
-- `estrutura.json`: Define a ordem das galáxias e seus planetas.
-- `planetaX.json`: Cada planeta tem seu próprio arquivo, contendo um array de atividades (texto, tipo, respostas, etc).
+- `structure.json`: Define a ordem das galáxias e seus planetas.
+- `planetX.json`: Cada planeta tem seu próprio arquivo, contendo um array de atividades (texto, tipo, respostas, etc).
 
 ---
 
 ### `pages/`
 Componentes de página inteira, que representam cada rota principal da aplicação.
-Ainda é necessário configurar o sistema de rotas dinâmicas utilizando algum plugin.
 
-- `LandingPage.jsx`: Página inicial pública com apresentação da plataforma (se o usuário já estiver logado, redirecionar direto para a Dashboard).
-- `Dashboard.jsx`: Página do aluno, mostra o progresso, galáxias desbloqueadas, e atividades disponíveis.
-- `Atividade.jsx`: Renderiza as atividades de um determinado planeta, montando os construtores correspondentes.
-
-Futuramente será adicionada uma `Login.jsx`: Tela de autenticação do usuário.
+- `LandingPage.jsx`: Página inicial pública com apresentação da plataforma (se o usuário já estiver logado, redireciona diretamente para a Dashboard).
+- `DashboardPage.jsx`: Página do aluno, mostra o progresso, galáxias desbloqueadas e atividades disponíveis.
+- `PlanetPage.jsx`: Exibe informações sobre um planeta específico, descrição e assuntos abordados.
+- `ActivitiesPage.jsx`: Renderiza as atividades de um determinado planeta, montando os construtores correspondentes.
+- `Error404.jsx`: Exibe uma página de erro 404 para rotas inválidas.
 
 ---
 
 ### `services/`
 Contém serviços auxiliares.
 
-- Pode ser adicionado o serviço responsável por autenticação, etc.
+- Pode incluir serviços responsáveis por autenticação, chamadas de API, etc.
+
+---
+
+### `routes.jsx`
+Arquivo responsável por configurar todas as rotas da aplicação.
+
+- Define as rotas principais, como `/`, `/dashboard`, `/:planetId`, e `/:planetId/activities`.
+- Possui uma rota "catch-all" para redirecionar rotas inválidas para a página de erro 404.
 
 ---
 
 ### `App.jsx`
-Componente principal.
+Componente principal que inicializa a aplicação as rotas.
 
 ---
 
 ### `main.jsx`
-Renderiza a árvore React.
+Renderiza a árvore de componentes React.
 
 ---
 

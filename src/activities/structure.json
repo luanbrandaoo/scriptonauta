@@ -1,0 +1,60 @@
+{
+  "galaxies": [
+    {
+      "id": "galaxy1",
+      "title": "Galáxia Introdutória",
+      "description": "Nesta galáxia, você dará os primeiros passos no mundo da programação e conhecerá a linguagem JavaScript, que será sua companheira durante toda a jornada.",
+      "planets": [
+        {
+          "id": "planet1",
+          "title": "O que é programação?",
+          "description": "Aprenda o conceito de programação, sua importância, e como ela é usada para resolver problemas do mundo real com computadores.",
+          "icon": ""
+        },
+        {
+          "id": "planet2",
+          "title": "O que é JavaScript?",
+          "description": "Descubra o que é JavaScript, para que serve, onde é utilizado e por que é uma das linguagens mais populares do mundo.",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "id": "galaxy2",
+      "title": "Galáxia das Variáveis",
+      "description": "Agora que você já conhece a base da programação, vamos explorar o uso de variáveis — elementos fundamentais para armazenar e manipular dados em JavaScript.",
+      "planets": [
+        {
+          "id": "planet3",
+          "title": "Aprendendo sobre variáveis",
+          "description": "Entenda o que são variáveis, por que elas existem e como ajudam a guardar valores que mudam durante a execução de um programa.",
+          "icon": ""
+        },
+        {
+          "id": "planet4",
+          "title": "Declarando variáveis",
+          "description": "Aprenda a declarar variáveis usando palavras-chave como `var`, `let` e `const`, e veja como cada uma se comporta.",
+          "icon": ""
+        },
+        {
+          "id": "planet5",
+          "title": "Inicializando variáveis",
+          "description": "Veja como dar valores iniciais às variáveis no momento em que são criadas, preparando-as para uso imediato.",
+          "icon": ""
+        },
+        {
+          "id": "planet6",
+          "title": "Atualizando variáveis",
+          "description": "Descubra como alterar os valores armazenados em variáveis e entenda como o comportamento varia conforme a forma como foram declaradas.",
+          "icon": ""
+        },
+        {
+          "id": "planet7",
+          "title": "Tipos de variáveis",
+          "description": "Explore os principais tipos de dados em JavaScript, como números, textos (strings), booleanos e muito mais.",
+          "icon": ""
+        }
+      ]
+    }
+  ]
+}

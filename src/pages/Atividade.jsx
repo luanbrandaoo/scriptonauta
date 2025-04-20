@@ -1,2 +1,0 @@
-// código reutilizavel para a página de atividades de todos os planetas, que ira ler o json do planeta, e montar todos os construtores de atividades correspondentes, passando as informaçoes necessarias como parametro. 
-// além de inserir uma barra de progresso e outros elementos.
