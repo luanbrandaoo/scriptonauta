@@ -26,8 +26,11 @@ src/
 │   ├── ActivitiesPage.jsx
 │   └── Error404.jsx
 ├── services/
+│   ├── firebase.js
 ├── App.jsx
-├── routes.jsx
+├── routes/
+│   ├── AppRoutes.jsx
+│   ├── PrivateRoutes.jsx
 ├── main.jsx
 └── index.css
 ```
@@ -71,16 +74,22 @@ Componentes de página inteira, que representam cada rota principal da aplicaç�
 
 ### `services/`
 Contém serviços auxiliares.
-
 - Pode incluir serviços responsáveis por autenticação, chamadas de API, etc.
+
+- `firebase.js`: Arquivo responsável por configurar e exportar as funcionalidades do Firebase para a aplicação.
 
 ---
 
-### `routes.jsx`
-Arquivo responsável por configurar todas as rotas da aplicação.
+### `routes/`
+Arquivos responsáveis por configurar todas as rotas da aplicação.
 
 - Define as rotas principais, como `/`, `/dashboard`, `/:planetId`, e `/:planetId/activities`.
 - Possui uma rota "catch-all" para redirecionar rotas inválidas para a página de erro 404.
+
+- `AppRoutes.jsx`: Define as rotas públicas da aplicação e a navegação entre elas.
+- `PrivateRoutes.jsx`: Gerencia as rotas privadas, ou seja, aquelas que exigem autenticação para serem acessadas. Caso o usuário não esteja autenticado, ele será redirecionado para a página de login.
+
+- Ao acessar a landing page (`/`), a aplicação verifica se o usuário está autenticado e, se estiver, redireciona automaticamente para o painel de controle (`/dashboard`).
 
 ---
 
