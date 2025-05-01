@@ -5,6 +5,7 @@ import DashboardPage from './pages/DashboardPage';
 import PlanetPage from './pages/PlanetPage';
 import ActivitiesPage from './pages/ActivitiesPage';
 import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage';
 
 function AppRoutes() {
     return (
@@ -13,6 +14,7 @@ function AppRoutes() {
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/404" element={<Error404 />} />
                 <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<SignUpPage />} />
                 <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="/:planetId" element={<PlanetPage />} />
                 <Route path="/:planetId/activities" element={<ActivitiesPage />} />
