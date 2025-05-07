@@ -1,10 +1,22 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
 import structure from '../activities/structure.json';
+import { auth } from "../services/firebase";
 
 function DashboardPage() {
+	const [name, setName] = useState("");
+
+	useEffect(() => {
+	  const user = auth.currentUser;
+	  if (user) {
+		setName(user.displayName || "usuário");
+	  }
+	}, []);
+
 	return (
 		<div>
 			<h1>Dashboard</h1>
+			<h1>Olá, {name}!</h1>
 			<h2>Planetas desbloqueados:</h2>
 			{structure.galaxies.map((galaxy) => (
 				<div key={galaxy.title} style={{ marginBottom: '20px' }}>
