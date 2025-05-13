@@ -1,17 +1,38 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; 
 import { useEffect, useState } from "react";
 import structure from '../activities/structure.json';
-import { auth } from "../services/firebase";
+import { auth, checkUserHasData, logoutUser } from "../services/firebase";
 
 function DashboardPage() {
 	const [name, setName] = useState("");
+	const navigate = useNavigate();
 
 	useEffect(() => {
-	  const user = auth.currentUser;
-	  if (user) {
-		setName(user.displayName || "usuário");
-	  }
-	}, []);
+		const user = auth.currentUser;
+		if (user) {
+			setName(user.displayName || "usuário");
+
+			const checkData = async () => {
+				const hasData = await checkUserHasData(user.uid);
+				if (!hasData) {
+					navigate('/register-data');
+				}
+			};
+
+			checkData();
+		} else {
+			navigate('/login');
+		}
+	}, [navigate]);
+
+	const handleLogout = async () => {
+		try {
+			await logoutUser();
+			navigate('/login');
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
 	return (
 		<div>
@@ -30,6 +51,11 @@ function DashboardPage() {
 					</div>
 				</div>
 			))}
+
+			<hr />
+			<button onClick={handleLogout} style={{ marginTop: '20px', backgroundColor: '#d9534f', color: '#fff' }}>
+				Sair
+			</button>
 		</div>
 	);
 }

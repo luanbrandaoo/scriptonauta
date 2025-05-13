@@ -21,7 +21,7 @@ function AppRoutes() {
     return unsubscribe;
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Carregando...</div>;
 
   return (
     <Router>
